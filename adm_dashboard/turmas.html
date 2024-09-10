@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Intranet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="bg3">
+      <img src="/adm_dashboard/img/backlaranja.png" alt="" />
+    </div>
+
+    <div class="container">
+      <div class="navigation">
+        <img src="img/logo.png" alt="" />
+        <ul>
+          <li>
+            <a href="index.html">
+              <span class="title">Página Inicial</span>
+            </a>
+          </li>
+          <li>
+            <a href="relatorio.html">
+              <span class="title">Relatórios</span>
+            </a>
+          </li>
+          <li>
+            <a href="eventos.html">
+              <span class="title">Eventos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Turmas</span>
+            </a>
+          </li>
+          <li>
+            <a href="/login_user.html">
+              <span class="title">Logout</span>
+            </a>
+          </li>
+        </ul>
+        <div class="bg1">
+          <img src="/adm_dashboard/img/backazulc.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="cardBox">
+        <h1 class="tituloturma">T U R M A S</h1>
+        <form action="" method="">
+          <div class="form-group">
+            <div class="input-group">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" required placeholder="Nome da Turma"/>
+            </div>
+            <div class="input-group">
+              <label for="modalidade" class="modalidade" >Modalidade:</label>
+              <select name="modalidade"  required>
+                <option value="">Selecione uma opção:</option>
+                <option value="natacao">Natação</option>
+                <option value="natacao_bb">Natação Bebê</option>
+                <option value="hidro">Hidroginástica</option>
+              </select>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label for="horario">Horário:</label>
+                <input type="time" id="horario" name="horario" required/>
+              </div>
+              <div class="input-group">
+                <label for="diaSemana">Dia da Semana:</label>
+                <select name="diaSemana" required>
+                  <option value="">Selecione uma opção:</option>
+                  <option value="segunda">Segunda-Feira</option>
+                  <option value="terca">Terça-Feira</option>
+                  <option value="quarta">Quarta-Feira</option>
+                  <option value="quinta">Quinta-Feira</option>
+                  <option value="sexta">Sexta-Feira</option>
+                  <option value="sabado">Sábado</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label for="vagas">Vagas:</label>
+                <input type="number" id="vagas" name="vagas" min="0" required />
+              </div>
+              <div class="input-group">
+                <label for="idade">Faixa Etária:</label>
+                <select name="idade" required>
+                  <option value="">Selecione uma opção:</option>
+                  <option value="bebe1">6 meses a 2 anos - acompanhado*</option>
+                  <option value="bebe2">2 a 3 anos de idade</option>
+                  <option value="adapt1">3 a 5 anos de idade</option>
+                  <option value="adapt2">6 a 9 anos de idade</option>
+                  <option value="inia">9 aos 14 anos de idade</option>
+                  <option value="adulto">+15</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    
+        <div class="buttonp">
+            <button>Publicar</button>
+        </div>
+        <div class="card-tabela">
+            <section class="turmas">
+              <details>
+                <summary>Natação bebê</summary>
+                <table>
+                  <tr>
+                    <th>Nome</th>
+                    <th>Faixa Etária</th>
+                    <th>Vagas</th>
+                    <th>Horário</th>
+                  </tr>
+                  <tr>
+                    <td>Natação para Bebê</td>
+                    <td>6 meses a 2 anos - acompanhado</td>
+                    <td>0</td>
+                    <td>T &amp; Q - 11h</td>
+                  </tr>
+                </table>
+              </details>
+              <details>
+                <summary>Natação</summary>
+                <table>
+                  <tr>
+                    <th>Categoria</th>
+                    <th>Faixa Etária</th>
+                    <th>Vagas</th>
+                    <th>Horário</th>
+                  </tr>
+                  <tr>
+                    <td>Adaptação I &amp; II</td>
+                    <td>Adulto &amp; Infantil</td>
+                    <td>0</td>
+                    <td>Segunda à sábado Diurno</td>
+                  </tr>
+                </table>
+              </details>
+              <details>
+                <summary>Hidroginástica</summary>
+                <table>
+                  <tr>
+                    <th>Categoria</th>
+                    <th>Faixa Etária</th>
+                    <th>Vagas</th>
+                    <th>Horário</th>
+                  </tr>
+                  <tr>
+                    <td>Hidroginástica</td>
+                    <td>Terceira idade</td>
+                    <td>0</td>
+                    <td>Segunda à sábado Diurno</td>
+                  </tr>
+                </table>
+              </details>
+              <div class="buttonea">
+                <button>Editar</button>
+                <button>Apagar</button>
+              </div>
+            </section>
+           
+          </div>
+          
+        </div>
+      </div>
+      
+      
+
+    <div class="bg2">
+      <img src="/adm_dashboard/img/backazule.png" alt="" />
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="editForm">
+          <div class="form-groupmodal">
+            <div class="input-group">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" required placeholder="Nome da Turma"/>
+            </div>
+            <div class="input-group">
+              <label for="modalidade" class="modalidade" >Modalidade:</label>
+              <select name="modalidade"  required>
+                <option value="">Selecione uma opção:</option>
+                <option value="natacao">Natação</option>
+                <option value="natacao_bb">Natação Bebê</option>
+                <option value="hidro">Hidroginástica</option>
+              </select>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label for="horario">Horário:</label>
+                <input type="time" id="horario" name="horario" required/>
+              </div>
+              <div class="input-group">
+                <label for="diaSemana">Dia da Semana:</label>
+                <select name="diaSemana" required>
+                  <option value="">Selecione uma opção:</option>
+                  <option value="segunda">Segunda-Feira</option>
+                  <option value="terca">Terça-Feira</option>
+                  <option value="quarta">Quarta-Feira</option>
+                  <option value="quinta">Quinta-Feira</option>
+                  <option value="sexta">Sexta-Feira</option>
+                  <option value="sabado">Sábado</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label for="vagas">Vagas:</label>
+                <input type="number" id="vagas" name="vagas" min="0" required />
+              </div>
+              <div class="input-group">
+                <label for="idade">Faixa Etária:</label>
+                <select name="idade" required>
+                  <option value="">Selecione uma opção:</option>
+                  <option value="bebe1">6 meses a 2 anos - acompanhado*</option>
+                  <option value="bebe2">2 a 3 anos de idade</option>
+                  <option value="adapt1">3 a 5 anos de idade</option>
+                  <option value="adapt2">6 a 9 anos de idade</option>
+                  <option value="inia">9 aos 14 anos de idade</option>
+                  <option value="adulto">+15</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="card-tabela">
+          <section class="turmas">
+            <details>
+              <summary>Natação bebê</summary>
+              <table>
+                <tr>
+                  <th>Nome</th>
+                  <th>Faixa Etária</th>
+                  <th>Vagas</th>
+                  <th>Horário</th>
+                </tr>
+                <tr>
+                  <td>Natação para Bebê</td>
+                  <td>6 meses a 2 anos - acompanhado</td>
+                  <td>0</td>
+                  <td>T &amp; Q - 11h</td>
+                </tr>
+              </table>
+            </details>
+            <details>
+              <summary>Natação</summary>
+              <table>
+                <tr>
+                  <th>Categoria</th>
+                  <th>Faixa Etária</th>
+                  <th>Vagas</th>
+                  <th>Horário</th>
+                </tr>
+                <tr>
+                  <td>Adaptação I &amp; II</td>
+                  <td>Adulto &amp; Infantil</td>
+                  <td>0</td>
+                  <td>Segunda à sábado Diurno</td>
+                </tr>
+              </table>
+            </details>
+            <details>
+              <summary>Hidroginástica</summary>
+              <table>
+                <tr>
+                  <th>Categoria</th>
+                  <th>Faixa Etária</th>
+                  <th>Vagas</th>
+                  <th>Horário</th>
+                </tr>
+                <tr>
+                  <td>Hidroginástica</td>
+                  <td>Terceira idade</td>
+                  <td>0</td>
+                  <td>Segunda à sábado Diurno</td>
+                </tr>
+              </table>
+            </details>
+          </section>
+         
+        </div>
+        <div class="buttonea">
+          <button>Editar</button>
+          <button>Apagar</button>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    
+    <script src="main.js"></script>
+  </body>
+</html>
