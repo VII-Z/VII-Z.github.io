@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Água vida | Musculação | No Guará | Distrito Federal </title>
+    <link rel="icon" sizes="192x192"
+        href="https://static.wixstatic.com/media/89b7b7_1b89619770264bbbb739fff71f91467b.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/89b7b7_1b89619770264bbbb739fff71f91467b.png"
+        type="image/png" />
+    <link rel="shortcut icon"
+        href="https://static.wixstatic.com/media/89b7b7_1b89619770264bbbb739fff71f91467b.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/89b7b7_1b89619770264bbbb739fff71f91467b.png"
+        type="image/png" />
+    <link rel="apple-touch-icon"
+        href="https://static.wixstatic.com/media/89b7b7_1b89619770264bbbb739fff71f91467b.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/89b7b7_1b89619770264bbbb739fff71f91467b.png"
+        type="image/png" />
+    <link href="https://fonts.cdnfonts.com/css/futura-lt" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        @font-face {
+            font-family: 'Futura LT Regular';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Futura LT Regular'), url('FuturaLT.woff') format('woff');
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #F2EEF0;
+            font-size: 80%;
+        }
+
+        /* Menu responsivo */
+        .cabecalho {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #087285;
+            padding: 1rem;
+            width: 100%;
+            height: auto;
+        }
+
+        .imgtexto {
+            width: 157px;
+            height: 67px;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+        }
+
+        .a-menu {
+            display: inline-block;
+            font: 1.2rem 'Anton', sans-serif;
+            text-decoration: none;
+            padding: 0 20px;
+            color: #FFF;
+        }
+
+        .a-menu:hover {
+            color: #EA6F07;
+        }
+
+        /* Banner */
+        #banner {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        #bt-wpp {
+            width: 70px;
+            height: 70px;
+            background-color: #61E831;
+            border-radius: 35px;
+            position: fixed;
+            bottom: 50px;
+            right: 30px;
+            box-shadow: 0 2px 4px #747373;
+            transition: 0.1s;
+        }
+
+        .wpp {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            bottom: 60px;
+            right: 40px;
+        }
+
+        #bt-wpp:hover {
+            box-shadow: 0 4px 8px #8C8585;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .cabecalho {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .a-menu {
+                display: none;
+                width: 100%;
+                padding: 15px;
+                background-color: #087285;
+                text-align: left;
+            }
+
+            .cabecalho.responsive .a-menu {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div class="cabecalho" id="cabecalho">
+            <img src="img/logo.png" alt="logo da academia agua vida" class="imgtexto">
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a class="a-menu" href="#">Home</a>
+            <a class="a-menu" href="modalidades.html">Modalidades</a>
+            <a class="a-menu" href="#">Eventos</a>
+            <a class="a-menu" href="#">Formulário</a>
+            <a class="a-menu" href="https://www.instagram.com/academia_aguavida/" target="_blank">Fale Conosco</a>
+            <a class="a-menu" href="login_user.html"><img src="img/icon_user.png"></a>
+        </div>
+    </nav>
+
+    <hr />
+
+    <div>
+        <img id="banner" src="img/banner.png" alt="banner da academia">
+        <div id="bt-wpp">
+            <img class="wpp" src="img/wpp-logo.png" alt="ícone do WhatsApp">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const cabecalho = document.getElementById('cabecalho');
+            cabecalho.classList.toggle('responsive');
+        });
+    </script>
+</body>
+
+</html>

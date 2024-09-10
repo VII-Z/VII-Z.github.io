@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academia Água vida | Musculação | No Guará | Distrito Federal</title>
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="https://static.wixstatic.com/media/89b7b7_1b89619770264bbbb739fff71f91467b.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/89b7b7_1b89619770264bbbb739fff71f91467b.png"
+      type="image/png"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://static.wixstatic.com/media/89b7b7_1b89619770264bbbb739fff71f91467b.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/89b7b7_1b89619770264bbbb739fff71f91467b.png"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://static.wixstatic.com/media/89b7b7_1b89619770264bbbb739fff71f91467b.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/89b7b7_1b89619770264bbbb739fff71f91467b.png"
+      type="image/png"
+    />
+    <link href="https://fonts.cdnfonts.com/css/futura-lt" rel="stylesheet" />
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="cabecalho">
+        <img
+          src="img/logo.png"
+          alt="logo da academia agua vida"
+          class="imgtexto"
+        />
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a class="a-menu" href="#">Home</a>
+        <a class="a-menu" href="modalidades.html">Modalidades</a>
+        <a class="a-menu" href="#">Eventos</a>
+        <a class="a-menu" href="#">Formulário</a>
+        <a
+          class="a-menu"
+          href="https://www.instagram.com/academia_aguavida/"
+          target="_blank"
+          >Fale Conosco</a
+        >
+        <a class="a-menu" href="login_user.html"
+          ><img src="img/icon_user.png"
+        /></a>
+      </div>
+    </nav>
+    <hr />
+    <br />
+    <br />
+    <h1 id="3">Formulário</h1>
+
+    <div class="form-box">
+      <img class="img-logo" src="img/logo.png" />
+      <form action="" method="">
+        <div class="form-group">
+          <div class="input-group">
+            <label for="nome">Nome completo:</label><br />
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              required
+              placeholder="Nome Completo"
+            />
+            <br /><br />
+          </div>
+          <div class="input-group">
+            <label for="cpf">CPF:</label><br />
+            <input
+              type="text"
+              id="cpf"
+              name="cpf"
+              required
+              placeholder="000.000.000-00"
+              onblur="validarCpfHandler()"
+              oninput="formatarCpf(this)"
+            />
+            <br />
+            <span id="cpfError" style="color: red; display: none"
+              >CPF inválido!</span
+            ><br />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <label for="birthdate">Data de Nascimento:</label><br />
+            <input type="date" id="datanasc" name="datanasc" /> <br /><br />
+          </div>
+          <div class="input-group">
+            <label for="telefone">Telefone:</label><br />
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              required
+              placeholder="(99)99999-9999"
+            />
+            <br /><br />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <label for="nome">Nome do responsável:</label><br />
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              required
+              placeholder="Nome Completo"
+            />
+            <br /><br />
+          </div>
+          <div class="input-group">
+            <label for="cpf">Cpf do responsável:</label><br />
+            <input
+              type="text"
+              id="cpf"
+              name="cpf"
+              placeholder="000.000.000-00"
+              onblur="validarCpfHandler()"
+              oninput="formatarCpf(this)"
+            />
+            <br />
+            <span id="cpfError" style="color: red; display: none"
+              >CPF inválido!</span
+            ><br />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <label for="email">Email:</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder=" fulano@gmail.com"
+            />
+            <br /><br />
+          </div>
+          <div class="input-group">
+            <label for="cep">CEP:</label>
+            <input
+              type="text"
+              id="cep"
+              name="cep"
+              maxlength="9"
+              onblur="buscarEndereco()"
+            />
+            <p id="mensagem-cep" style="color: red; display: none">
+              CEP inválido
+            </p>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <label for="rua">Rua:</label>
+            <input type="text" id="rua" name="rua" />
+          </div>
+          <div class="input-group">
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" />
+          </div>
+
+          <div class="input-group">
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" />
+          </div>
+          <div class="input-group">
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" />
+          </div>
+
+          <div class="input-group">
+            <label for="casa">Numero:</label>
+            <input type="text" id="casa" name="casa" />
+          </div>
+        </div>
+        <label for="nivel">Modalidade:</label>
+        <select id="nivel" name="nivel">
+          <option value="Selecione">Selecione</option>
+          <option value="natacao_bb">Natação bebê</option>
+          <option value="natacao">Natação</option>
+          <option value="hidro">Hidroginástica</option>
+          <option value="evento">Evento</option>
+        </select>
+        <label for="nivel">Turmas:</label>
+        <select id="nivel" name="nivel">
+          <option value="Selecione">Selecione</option>
+          <option value="natacao_bb">Ter e Qui - 11:00 0 16:40 - 17:20</option>
+          <option value="natacao">Sáb - 08:20 - 9h - 10:40 - 11:25</option>
+        </select>
+
+        <br />
+
+        <div class="btn-container">
+          <a href="form_user_agradecimento.html"
+            ><input type="submit" value="Enviar"
+          /></a>
+        </div>
+      </form>
+    </div>
+
+    <br />
+    <br />
+    <footer>
+      <p>
+        Desenvolvido por <a class="fot" href="" target="_blank">Alice Alves</a>,
+        <a class="fot" href="http://instagram.com/miiandr" target="_blank"
+          >Milena de Araujo</a
+        >,
+        <a class="fot" href="http://instagram.com/viiz.sant" target="_blank"
+          >Vitoria Santana</a
+        >
+        - 2024
+      </p>
+    </footer>
+    <script>
+      function formatarCpf(cpfInput) {
+        let cpf = cpfInput.value.replace(/\D/g, ""); // Remove tudo o que não é dígito
+
+        if (cpf.length <= 11) {
+          cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2"); // Adiciona o primeiro ponto
+          cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2"); // Adiciona o segundo ponto
+          cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2"); // Adiciona o hífen
+        }
+
+        cpfInput.value = cpf;
+      }
+
+      function validarPrimeiroDigito(cpf) {
+        let sum = 0;
+        for (let i = 0; i < 9; i++) {
+          sum += cpf[i] * (10 - i);
+        }
+        const resto = (sum * 10) % 11;
+        if (resto < 10) {
+          return cpf[9] == resto;
+        }
+        return cpf[9] == 0;
+      }
+
+      function validarSegundoDigito(cpf) {
+        let sum = 0;
+        for (let i = 0; i < 10; i++) {
+          sum += cpf[i] * (11 - i);
+        }
+        const resto = (sum * 10) % 11;
+        if (resto < 10) {
+          return cpf[10] == resto;
+        }
+        return cpf[10] == 0;
+      }
+
+      function validarRepetido(cpf) {
+        const primeiro = cpf[0];
+        let diferente = false;
+        for (let i = 1; i < cpf.length; i++) {
+          if (cpf[i] != primeiro) {
+            diferente = true;
+          }
+        }
+        return diferente;
+      }
+
+      function validarCpf(cpf) {
+        cpf = cpf.replace(/\D/g, "");
+        if (cpf.length != 11) {
+          return false;
+        }
+        if (!validarRepetido(cpf)) {
+          return false;
+        }
+        if (!validarPrimeiroDigito(cpf)) {
+          return false;
+        }
+        if (!validarSegundoDigito(cpf)) {
+          return false;
+        }
+        return true;
+      }
+
+      function validarCpfHandler() {
+        let cpfInput = document.getElementById("cpf").value;
+        let cpf = cpfInput
+          .replace(/\D/g, "")
+          .split("")
+          .map((e) => parseInt(e));
+        let cpfError = document.getElementById("cpfError");
+
+        if (validarCpf(cpf)) {
+          cpfError.style.display = "none";
+        } else {
+          cpfError.style.display = "block";
+        }
+      }
+
+      /* codigo cep*/
+      function formatarCep(cep) {
+        return cep.replace(/^(\d{5})(\d{3})$/, "$1-$2");
+      }
+
+      function buscarEndereco() {
+        let cep = document.getElementById("cep").value.replace(/\D/g, "");
+        document.getElementById("mensagem-cep").style.display = "none";
+
+        if (cep.length === 8) {
+          cep = formatarCep(cep); // Formatar o CEP com pontos
+          const url = `https://viacep.com.br/ws/${cep}/json/`;
+
+          fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+              if (!data.erro) {
+                document.getElementById("rua").value = data.logradouro;
+                document.getElementById("bairro").value = data.bairro;
+                document.getElementById("cidade").value = data.localidade;
+                document.getElementById("estado").value = data.uf;
+              } else {
+                document.getElementById("mensagem-cep").style.display = "block";
+              }
+            })
+            .catch((error) => {
+              document.getElementById("mensagem-cep").style.display = "block";
+            });
+        } else {
+          document.getElementById("mensagem-cep").style.display = "block";
+        }
+      }
+    </script>
+    <script src="textjs.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Redefinir senha</title>
+    <link rel="icon" sizes="192x192" href="https://static.wixstatic.com/media/89b7b7_1b89619770264bbbb739fff71f91467b.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/89b7b7_1b89619770264bbbb739fff71f91467b.png" type="image/png"/>
+    <link rel="shortcut icon" href="https://static.wixstatic.com/media/89b7b7_1b89619770264bbbb739fff71f91467b.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/89b7b7_1b89619770264bbbb739fff71f91467b.png" type="image/png"/>
+    <link rel="apple-touch-icon" href="https://static.wixstatic.com/media/89b7b7_1b89619770264bbbb739fff71f91467b.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/89b7b7_1b89619770264bbbb739fff71f91467b.png" type="image/png"/>
+    <link href="https://fonts.cdnfonts.com/css/futura-lt" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        @font-face {
+            font-family: 'Futura LT Regular';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Futura LT Regular'), url('FuturaLT.woff') format('woff');
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #e8e8e8;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .img-logo img {
+            width: 100%;
+            max-width: 200px;
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font: 1.6rem 'Futura LT', sans-serif;
+            font-weight: 700;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        p {
+            font: 1rem 'Futura LT Regular', sans-serif;
+            color: #e8e8e8;
+            text-align: center;
+        }
+
+        .top-bar, .bottom-bar {
+            height: 40px;
+            background-color: #087285;
+            width: 100vw;
+            position: relative;
+        }
+
+        .top-bar {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 20px;
+        }
+
+        .bottom-bar {
+            position: sticky;
+            bottom: 0;
+        }
+
+        .top-bar img {
+            width: 30px;
+        }
+
+        .login-container-wrapper {
+            background-color: #087285;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+            padding: 20px;
+            margin: auto;
+            margin-top: 20px;
+            flex: 1;
+            min-height: 300px;
+        }
+
+        .login-container h3 {
+            margin-bottom: 20px;
+        }
+
+        .login-container label {
+            font: 1rem 'Futura LT Regular', sans-serif;
+            color: #e8e8e8;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 7px;
+            border: none;
+        }
+
+        .login-container button {
+            font: 1rem 'Futura LT Regular';
+            background-color: #EA6F07;
+            color: #e8e8e8;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .forgot-password {
+            margin-top: 10px;
+            font: 0.8rem 'Futura LT Regular', sans-serif;
+            text-decoration: none;
+            color: #e8e8e8;
+            text-align: center;
+            display: block;
+        }
+
+        .bottom-bar{
+          margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #e8e8e8;
+        }
+
+        @media (min-width: 768px) {
+            .login-container-wrapper {
+                padding: 40px;
+            }
+
+            .login-container button {
+                width: 50%;
+                margin-left: 25%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <a href="https://www.academiaaguavida.com.br/"><img src="img/casinha_icon.png" alt="Home"></a>
+    </div>
+
+    <div class="login-container-wrapper">
+        <div class="login-container">
+            <div class="img-logo">
+                <img src="img/logo.png" alt="Logo Academia">
+            </div>
+            <h3>Redefinir senha</h3>
+            <form action="#">
+                <p>Informe o e-mail para qual deseja redefinir a sua senha.</p>
+
+                <label for="email">Seu email de acesso:</label>
+                <input type="email" id="email" name="email" placeholder="fulano@gmail.com" required>
+
+                <a href="login_user.html" class="forgot-password">Voltar ao Login?</a>
+
+                <button type="submit">ENVIAR</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="bottom-bar"></div>
+
+</body>
+</html>
